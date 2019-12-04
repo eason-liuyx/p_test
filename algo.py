@@ -19,8 +19,8 @@ def quick_sort(arr, left, right):
 		arr[j] = arr[i]
 
 	arr[i] = key
-	quick_sort(arr, left, i - 1)
-	quick_sort(arr, i + 1, right)
+	quick_sort(arr=arr, left=left, right=i - 1)
+	quick_sort(arr=arr, left=i + 1, right=right)
 
 
 def leastinterval(tasks, tasksize, n):
@@ -30,7 +30,7 @@ def leastinterval(tasks, tasksize, n):
 
 	print(a)
 
-	quick_sort(a, 0, 25)
+	quick_sort(arr=a, left=0, right=25)
 
 	time = 0
 	while a[25] > 0:
@@ -42,7 +42,7 @@ def leastinterval(tasks, tasksize, n):
 
 			time += 1
 			i += 1
-		quick_sort(a, 0, 25)
+		quick_sort(arr=a, left=0, right=25)
 
 	return time
 
